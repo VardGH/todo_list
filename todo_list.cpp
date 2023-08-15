@@ -1,12 +1,16 @@
 #include "todo_list.hpp"
 
+#include <iostream> 
+#include <fstream>
+#include <limits>
+#include <sstream>
+#include <iomanip>
+#include <cstring>
+
 void TodoList::creat_task(const std::string& description, const bool completed, const time_t deadline)
 {
     // Create a new Task object
-    Task task(description, completed, deadline);
-
-    // Add the newly created task to the task vector
-    m_tasks.push_back(task);
+    m_tasks.emplace_back(Task(description, completed, deadline));
 
     // Save the updated task list to the file after adding the new task
     save_to_file(file_name);

@@ -20,7 +20,8 @@ void Menu::display_menu() const
     std::cout << "Enter your choice: ";
 }
 
-void Menu::play() {
+void Menu::play() 
+{
     int choice {};
 
     while (true) {
@@ -45,7 +46,8 @@ void Menu::play() {
     }
 }
 
-void Menu::handle_create_task() {
+void Menu::handle_create_task() 
+{
     std::string description;
     std::cout << "Enter task description: ";
     std::cin.ignore();
@@ -71,7 +73,8 @@ void Menu::handle_create_task() {
     }
 }
 
-void Menu::handle_update_task() {
+void Menu::handle_update_task() 
+{
     int index;
     std::cout << "Enter task index to update: ";
     std::cin >> index;
@@ -84,7 +87,8 @@ void Menu::handle_update_task() {
     m_todo.update_task(index, new_description);
 }
 
-void Menu::handle_delete_task() {
+void Menu::handle_delete_task() 
+{
     int index;
     std::cout << "Enter task index to delete: ";
     std::cin >> index;
@@ -92,7 +96,8 @@ void Menu::handle_delete_task() {
     m_todo.delete_task(index);
 }
 
-void Menu::handle_mark_as_done() {
+void Menu::handle_mark_as_done() 
+{
     int index;
     std::cout << "Enter task index to mark as done: ";
     std::cin >> index;

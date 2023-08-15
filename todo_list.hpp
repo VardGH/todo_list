@@ -3,15 +3,9 @@
 
 #include "task.hpp"
 
-#include <iostream>
 #include <vector>
 #include <string>
-#include <fstream>
-#include <limits>
-#include <sstream>  // Include this header for std::istringstream
-#include <iomanip>  // Include this header for std::get_time
 #include <ctime>    // Include this header for std::mktime
-#include <cstring>  // Include this header for memset
 
 class TodoList
 {
